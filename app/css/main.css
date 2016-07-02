@@ -1,0 +1,39 @@
+body, h2, ul, li {
+  margin: 0; }
+
+.header {
+  padding: 1rem;
+  background-color: #854364; }
+
+.logo {
+  color: #FFFFFF; }
+
+.sidebar {
+  background-color: #faf5f7;
+  position: fixed;
+  left: 15rem;
+  top: 5rem; }
+
+.sidebar ul {
+  list-style: none;
+  padding: 0; }
+
+.sidebar li {
+  padding: 1em;
+  border-bottom: 1px solid #CCCCCC; }
+
+.sidebar li:last-child {
+  border-bottom: 0; }
+
+.sidebar a {
+  font-size: 1.1rem;
+  text-decoration: none; }
+
+.content {
+  margin-left: 25rem;
+  display: inline-block;
+  width: 50%;
+  padding: 2em;
+  font-size: 3em;
+  text-align: center;
+  color: #b2b2b2; }

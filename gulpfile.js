@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 var htmlreplace = require('gulp-html-replace');
 var babel = require('gulp-babel');
 var browserify = require('gulp-browserify');
+var browserSync = require('browser-sync').create();
 
 var path = {
 	HTML: 'src/index.html',
@@ -29,7 +30,8 @@ gulp.task('transform', function() {
 gulp.task('browserify', function() {
 	gulp.src('dist/src/js/App.js')
 		.pipe(browserify())
-		.pipe(gulp.dest('./build/js/'));
+		.pipe(gulp.dest('./app/js/'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('sass', function () {
@@ -40,8 +42,9 @@ gulp.task('sass', function () {
 
 gulp.task('copyCSS', function () {
 	// TODO: For later use
-	return gulp.src(path.DEST_CSS)
-	    .pipe(gulp.dest('./build/css'));
+	gulp.src("dist/src/css/main.css")
+	    .pipe(gulp.dest('./app/css'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('copyHTML', function() {
@@ -49,10 +52,10 @@ gulp.task('copyHTML', function() {
     	.pipe(gulp.dest(path.DEST));
 });
 
-gulp.task('watch', function() {
-  	gulp.watch(path.ALL, ['transform', 'browserify', 'sass', 'copyCSS', 'copyHTML']); // TODO: Use this later
-	//gulp.watch(path.ALL, ['transform', 'sass', 'copyHTML']);
-});
+// gulp.task('watch', function() {
+//   	gulp.watch(path.ALL, ['transform', 'browserify', 'sass', 'copyCSS', 'copyHTML']); // TODO: Use this later
+// 	//gulp.watch(path.ALL, ['transform', 'sass', 'copyHTML']);
+// });
 
 // TODO: Make sure you test this one.
 gulp.task('build', function() {
@@ -77,4 +80,17 @@ gulp.task('replaceHTML', function() {
 gulp.task('production', ['replaceHTML', 'build']);
 
 // Default task
-gulp.task('default', ['transform', 'browserify', 'sass', 'copyCSS', 'copyHTML', 'watch']);
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+    // browserSync.init({
+    //     server: "./app"
+    // });
+	browserSync.init({
+        proxy: "localhost:3000"
+    });
+
+    gulp.watch(path.ALL, ['transform', 'browserify', 'sass', 'copyCSS', 'copyHTML']);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
+});
+
+gulp.task('default', ['serve']);
