@@ -1,4 +1,5 @@
 // Storage classes
+// TODO: Convert to ES6
 var DataStore = {
 	getDataStore: function(localStore) {
 		var localDataStorage = {

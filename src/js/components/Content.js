@@ -1,14 +1,6 @@
-// var Content = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<div className="content">
-// 				Contents section
-// 			</div>
-// 		);
-// 	}
-// });
+import React from "react";
 
-export class Counter extends React.Component {
+export default class Content extends React.Component {
 	render() {
 		return (
 			<div className="content">

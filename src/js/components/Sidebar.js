@@ -1,5 +1,7 @@
-var Sidebar = React.createClass({
-	render: function() {
+import React from "react";
+
+export default class Sidebar extends React.Component {
+	render() {
 		return (
 			<nav className="sidebar">
 				<ul>
@@ -16,4 +18,4 @@ var Sidebar = React.createClass({
 			</nav>
 		);
 	}
-});
+}
