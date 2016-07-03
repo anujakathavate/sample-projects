@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp",
+    "dist": "gulp dist",
     "start": "node app & gulp"
   },
   "author": "",

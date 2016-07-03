@@ -13,7 +13,7 @@ export default class Sidebar extends React.Component {
 					</li>
 					<li>
 						<a href="">Navigation 3</a>
-					</li>
+					</li>					
 				</ul>
 			</nav>
 		);
