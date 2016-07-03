@@ -3,8 +3,8 @@ import React from "react";
 export default class Sidebar extends React.Component {
 	render() {
 		return (
-			<nav className="sidebar">
-				<ul>
+			<nav className="sidebar small-2 medium-3 large-4">
+				<ul className="vertical medium-vertical menu">
 					<li>
 						<a href="">Navigation 1</a>
 					</li>
@@ -13,7 +13,7 @@ export default class Sidebar extends React.Component {
 					</li>
 					<li>
 						<a href="">Navigation 3</a>
-					</li>					
+					</li>
 				</ul>
 			</nav>
 		);
