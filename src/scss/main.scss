@@ -2,6 +2,11 @@ body, h2, ul, li {
 	margin: 0;
 }
 
+// Common Styles
+.no-padding {
+	padding: 0;
+}
+
 // Header styles
 .header {
 	background-color: #FFFFFF;
@@ -71,7 +76,7 @@ body, h2, ul, li {
 	background-color: #803737;
 }
 
-// Carousel  styles
+// Carousel styles
 .carousel {
 	height: 550px;
 	overflow: hidden;
@@ -91,4 +96,51 @@ body, h2, ul, li {
     margin-top: -48%;
     color: #fff;
     font-weight: bold;
+}
+
+// Gallery Card styles
+.gallery-card {
+	position: relative;
+}
+
+.gallery-card img {
+	width: 100%;
+	height: 450px;
+}
+
+.gallery-card-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.7);
+	top: 0;
+	left: 0;
+
+	// Animations
+	-moz-transition: background .2s ease-in;
+    -o-transition: background .52s ease-in;
+    -webkit-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+
+.gallery-card-overlay:hover, .gallery-label:hover ~ .gallery-card-overlay {
+	background: rgba(255, 255, 255, 0);
+	cursor: pointer;
+}
+
+.gallery-label {
+	width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+    margin-left: -150px;
+    margin-top: -24px;
+    cursor: pointer;
 }
