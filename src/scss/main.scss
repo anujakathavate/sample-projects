@@ -56,6 +56,15 @@ body, h2, ul, li {
 
 .menu li a {
 	color: #444444;
+	-moz-transition: background .2s ease-in;
+    -o-transition: background .52s ease-in;
+    -webkit-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+
+.menu li a:hover {
+	color: #fefefe;
+	background: #803737;
 }
 
 .menu .active > a{
