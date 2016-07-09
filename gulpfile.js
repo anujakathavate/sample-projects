@@ -13,6 +13,7 @@ var path = {
 	ALL: ['src/js/*.js', 'src/js/**/*.js', 'src/index.html', 'src/scss/*.scss', 'src/scss/**/*.scss'],
 	JS: ['src/js/*.js', 'src/js/**/*.js'],
 	SCSS: ['src/scss/*.scss', 'src/scss/**/*.scss'],
+	IMG: 'src/images/**',
 	MINIFIED_OUT: 'build.min.js',
 	DEST_SRC: 'dist/src/js',
 	DEST_CSS: 'dist/src/css',
@@ -50,6 +51,11 @@ gulp.task('copyHTML', function() {
     	.pipe(gulp.dest(path.DEST));
 });
 
+gulp.task('copyIMG', function() {
+  	gulp.src(path.IMG)
+    	.pipe(gulp.dest(path.DEST));
+});
+
 // Default task
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -57,13 +63,13 @@ gulp.task('serve', ['sass'], function() {
         proxy: "localhost:3000"
     });
 
-    gulp.watch(path.ALL, ['transform', 'browserify', 'sass', 'copyCSS', 'copyHTML']);
+    gulp.watch(path.ALL, ['transform', 'browserify', 'sass', 'copyCSS', 'copyHTML', 'copyIMG']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 // TODO: browserify is not working as expected. Some times we will have to save the file twise.
-gulp.task('default', ['transform', 'browserify' ,'sass', 'copyCSS', 'copyHTML', 'serve']);
-gulp.task('dist', ['transform','sass', 'copyCSS', 'copyHTML']);
+gulp.task('default', ['transform', 'browserify' ,'sass', 'copyCSS', 'copyHTML', 'copyIMG', 'serve']);
+gulp.task('dist', ['transform','sass', 'copyCSS', 'copyHTML', 'copyIMG']);
 
 // Production Build. To be used later.
 // TODO: Make sure you test this one.

@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Content from "./Content";
+import Carousel from "./Carousel";
 
 export default class Container extends React.Component {
 	render() {
 		return (
 			<div>
 				<Header/>
-				<Sidebar/>
-				<Content/>
+				<Carousel/>
 			</div>
 		);
 	}
