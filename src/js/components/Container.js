@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Carousel from "./Carousel";
 import GalleryCard from "./GalleryCard";
+import Break from "./Break";
 
 export default class Container extends React.Component {
 	render() {
@@ -9,7 +10,7 @@ export default class Container extends React.Component {
 			<div>
 				<Header/>
 				<Carousel/>
-				<div className="row-fluid">
+				<div className="row-fluid clear-fix">
 					<div className="small-4 columns no-padding">
 						<GalleryCard label="Our Mission And Vision" imgSrc="mission-vision.jpg"/>
 					</div>
@@ -20,6 +21,7 @@ export default class Container extends React.Component {
 						<GalleryCard label="Services Overview" imgSrc="services-overview.jpeg"/>
 					</div>
 				</div>
+				<Break />
 			</div>
 		);
 	}

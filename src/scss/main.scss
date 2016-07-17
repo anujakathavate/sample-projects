@@ -7,6 +7,11 @@ body, h2, ul, li {
 	padding: 0;
 }
 
+.clear-fix {
+	float: none;
+	overflow: hidden;
+}
+
 // Header styles
 .header {
 	background-color: #FFFFFF;
@@ -143,4 +148,18 @@ body, h2, ul, li {
     margin-left: -150px;
     margin-top: -24px;
     cursor: pointer;
+}
+
+// Break
+.break {
+	position: relative;
+	padding: 50px;
+}
+
+.break .vertical-line {
+	height: 50px;
+	width: 1px;
+	background-color: transparent;
+	margin-left: 50%;
+	border-left: 1px solid #cccccc;
 }
