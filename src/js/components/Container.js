@@ -6,6 +6,7 @@ import Break from "./Break";
 import WelcomeNote from "./WelcomeNote";
 import Details from "./Details";
 import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
 export default class Container extends React.Component {
 	render() {
@@ -29,6 +30,7 @@ export default class Container extends React.Component {
 				<Break/>
 				<Details/>
 				<ContactUs/>
+				<Footer/>
 			</div>
 		);
 	}

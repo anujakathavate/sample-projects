@@ -8,7 +8,7 @@ var ContactUs = () => {
 			<div className="small-2 columns small-centered text-center">
                 <h3>CONTACT US</h3>
 			</div>
-            <div className="row-fluid contact-us">
+            <div className="row contact-us">
                 <div className="small-4 columns text-center">
                     #XXX Imaginary Area,
                     <br/>
