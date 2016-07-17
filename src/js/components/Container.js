@@ -3,6 +3,7 @@ import Header from "./Header";
 import Carousel from "./Carousel";
 import GalleryCard from "./GalleryCard";
 import Break from "./Break";
+import WelcomeNote from "./WelcomeNote";
 
 export default class Container extends React.Component {
 	render() {
@@ -22,6 +23,7 @@ export default class Container extends React.Component {
 					</div>
 				</div>
 				<Break />
+				<WelcomeNote/>
 			</div>
 		);
 	}
