@@ -4,6 +4,8 @@ import Carousel from "./Carousel";
 import GalleryCard from "./GalleryCard";
 import Break from "./Break";
 import WelcomeNote from "./WelcomeNote";
+import Details from "./Details";
+import ContactUs from "./ContactUs";
 
 export default class Container extends React.Component {
 	render() {
@@ -22,8 +24,11 @@ export default class Container extends React.Component {
 						<GalleryCard label="Services Overview" imgSrc="services-overview.jpeg"/>
 					</div>
 				</div>
-				<Break />
+				<Break/>
 				<WelcomeNote/>
+				<Break/>
+				<Details/>
+				<ContactUs/>
 			</div>
 		);
 	}
