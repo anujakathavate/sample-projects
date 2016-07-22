@@ -6,16 +6,18 @@
 
 		<link rel="stylesheet" type="text/css" href="foundation-sites/dist/foundation.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-
-		<script src="jquery/dist/jquery.min.js" charset="utf-8"></script>
-		<script src="foundation-sites/dist/foundation.min.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="app" class="main"></div>
-		<!-- TODO: These are depepedent files and needs to be bunduled in one file using Browserify -->
-		<!-- <script src="jquery/dist/jquery.min.js"></script>
-		<script src="q/q.js"></script>
-		<script src="classnames/bind.js"></script> -->
+		
+		<!-- Plugins -->
+		<script src="jquery/dist/jquery.min.js" charset="utf-8"></script>
+		<script src="foundation-sites/dist/foundation.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(document).foundation();
+			});
+		</script>
 
 		<!-- App Entrypoint -->
 		<script src="js/App.js"></script>

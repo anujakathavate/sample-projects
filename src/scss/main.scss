@@ -37,6 +37,7 @@ body, h2, ul, li {
 	background-color: #FAFAFA;
 	padding: 5px;
 	border-top: 1px solid #E8E8E8;
+	width: 100%;
 }
 
 .sidebar ul {
@@ -72,12 +73,16 @@ body, h2, ul, li {
     transition: background .2s ease-in;
 }
 
+.menu > li {
+	white-space: nowrap;
+}
+
 .menu li a:hover {
 	color: #fefefe;
 	background: #803737;
 }
 
-.menu .active > a{
+.menu .active > a {
 	background-color: #803737;
 }
 
@@ -144,7 +149,7 @@ body, h2, ul, li {
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 99;
+    z-index: 4;
     margin-left: -150px;
     margin-top: -24px;
     cursor: pointer;
