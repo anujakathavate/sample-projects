@@ -9,11 +9,17 @@ import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 
 export default class Container extends React.Component {
+	componentDidMount() {
+		$(document).ready(function() {
+			$(document).foundation();
+		});
+	}
+
 	render() {
 		return (
 			<div>
 				<Header/>
-				<Carousel/>				
+				<Carousel/>
 				<GalleryCards/>
 				<Break/>
 				<WelcomeNote/>
