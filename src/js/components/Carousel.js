@@ -26,7 +26,7 @@ export default class Carousel extends React.Component {
 					</div>
 				</div>
 				<div className="carousel-message">
-					Leader in Blah Blah.. and Blah Blah Technologies
+					We are problem solvers, innovators, and creators
 				</div>
 			</div>
 		);

@@ -10,19 +10,19 @@ var ContactUs = () => {
 			</div>
             <div className="row contact-us">
                 <div className="small-4 columns text-center">
-                    #XXX Imaginary Area,
-                    <br/>
-                    Imaginary City, XXXXXX
+					#XXX Kormangala,
+					<br/>
+					Bangalore, 560034
                 </div>
                 <div className="small-4 columns text-center">
-                    Phone: +91 XXX XXXXXX
-                    <br/>
-                    FAX: +91 YYY YYYYYY
+					+91 994 5333602
+					<br/>
+					+91 973 1100227
                 </div>
                 <div className="small-4 columns text-center">
-                    Email: company@company-domain.com
+                    Email: contact@emergesoft.com
                     <br/>
-                    Facebook: https://www.facebook.com/company.name
+                    Facebook: https://www.facebook.com/emergesoft
                 </div>
             </div>
 		</div>
