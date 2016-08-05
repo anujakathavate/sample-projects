@@ -7,9 +7,9 @@ export default class Header extends React.Component {
 			<header className="header">
 				<div className="row">
 					<div className="large-3 text-center columns brand-details">
-						#XXX Kormangala,
+						sales@emergesoft.in
 						<br/>
-						Bangalore, 560034
+						Bangalore
 					</div>
 					<div className="large-6 text-center columns">
 						<h1 className="brand-name">EmergeSoft</h1>

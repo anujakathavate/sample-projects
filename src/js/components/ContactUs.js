@@ -20,7 +20,7 @@ var ContactUs = () => {
 					+91 973 1100227
                 </div>
                 <div className="small-4 columns text-center">
-                    Email: contact@emergesoft.com
+                    Email: sales@emergesoft.in
                     <br/>
                     Facebook: https://www.facebook.com/emergesoft
                 </div>

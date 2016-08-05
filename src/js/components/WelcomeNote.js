@@ -8,9 +8,7 @@ var WelcomeNote = () => {
 			</div>
             <div className="small-6 small-centered text-center">
                 <div className="welcome-note">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                    nascetur ridiculus mus.
+                    We build beautiful websites with passion and take all your burdens  of day-today work on us by making the software as easy as possible that even children can play with  and use the software as it it was a toy.
                 </div>
 			</div>
             <div className="small-2 small-centered text-center">
