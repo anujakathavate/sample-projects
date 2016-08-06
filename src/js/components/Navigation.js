@@ -8,6 +8,11 @@ export default class Navigation extends React.Component {
 		$('html, body').animate({
 		    scrollTop: ($('.contact-us-container').offset().top)
 		}, 500);
+
+		// $(document).on("click", $(".navigation-container"), function(e) {
+		// 	$(".navigation-container li.active").removeClass("active");
+		// 	$(e.target).parent().addClass("active");
+		// });
 	}
 
 	render() {
@@ -17,11 +22,11 @@ export default class Navigation extends React.Component {
 					<div className="row-fluid">
 						<div className="small-5 columns small-centered">
 							<ul className="dropdown menu" data-dropdown-menu>
-								<li className="active"><a href="">Home</a></li>
+								<li className="active"><a href="#" className="first">Home</a></li>
 								<li><a href="#" data-open="services">Services</a></li>
 								<li><a href="#" data-open="products">Products</a></li>
 								<li><a href="#" data-open="about">About</a></li>
-								<li onClick={this.gotoContactUs}><a href="#">Contact Us</a></li>
+								<li onClick={this.gotoContactUs}><a href="#" className="last">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>

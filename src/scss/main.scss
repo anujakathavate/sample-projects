@@ -117,11 +117,20 @@ body, h2, ul, li {
 }
 
 .orbit-bullets button {
-	margin: 0.1em 0.5em 0.1em 0.5em;	
+	margin: 0.1em 0.5em 0.1em 0.5em;
 }
 
 .orbit-bullets button.is-active, .orbit-bullets button:hover {
 	background-color: #8C4B4B;
+}
+
+// Modal dialogs
+.full.reveal {
+	padding: 10em;
+}
+
+.full .close-button {
+	font-size: 4em;
 }
 
 // Gallery Card styles
