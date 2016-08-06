@@ -1,4 +1,7 @@
 import React from "react";
+import Services from "./Services";
+import Products from "./Products";
+import About from "./About";
 
 export default class Navigation extends React.Component {
 	gotoContactUs() {
@@ -15,14 +18,17 @@ export default class Navigation extends React.Component {
 						<div className="small-5 columns small-centered">
 							<ul className="dropdown menu" data-dropdown-menu>
 								<li className="active"><a href="">Home</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Products</a></li>
-								<li><a href="#">About</a></li>
+								<li><a href="#" data-open="services">Services</a></li>
+								<li><a href="#" data-open="products">Products</a></li>
+								<li><a href="#" data-open="about">About</a></li>
 								<li onClick={this.gotoContactUs}><a href="#">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
 				</nav>
+				<Services id="services"/>
+				<Products id="products"/>
+				<About id="about"/>
 			</div>
 		);
 	}
