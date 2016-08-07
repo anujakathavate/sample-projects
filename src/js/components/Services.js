@@ -3,7 +3,7 @@ import Modal from "./Modal";
 
 var Services = ({id}) => {
 	return (
-		<Modal size="full" animIn="slide-in-right" animOut="slide-out-right" id={id} className="dfkjds">
+		<Modal size="full" animIn="slide-in-right" animOut="slide-out-right" id={id}>
             <h3>Services</h3>
             <p>
 				Website is the first step towards the growth of any organization and creates the first impression

@@ -1,5 +1,5 @@
-@import '../../node_modules/foundation-sites/scss/util/unit';
-@import "../../node_modules/foundation-sites/scss/util/breakpoint";
+@import '../../node_modules/foundation-sites/scss/global';
+@import '../../node_modules/foundation-sites/scss/util/util';
 
 body, h2, ul, li {
 	margin: 0;
@@ -89,10 +89,29 @@ body, h2, ul, li {
 }
 
 .dropdown.menu li a {
-	font-size: 26px;
-	margin: 15px;
+	font-size: 1.625rem;
+	margin: 0.938rem;
 	display: inline-block;
 }
+
+@include breakpoint(medium down) {
+	.dropdown.menu li a {
+	    font-size: 1rem;
+	    margin: 0.5rem;
+	}
+}
+
+// @include breakpoint(64em) {
+// 	.nav-items {
+// 	    margin-left: auto;
+// 	}
+// }
+//
+// @include breakpoint(medium and landscape only) {
+// 	.nav-items {
+// 	    margin-left: 6rem;
+// 	}
+// }
 
 .menu li a {
 	color: #444444;
@@ -113,6 +132,18 @@ body, h2, ul, li {
 
 .menu .active > a {
 	background-color: #803737;
+}
+
+// Offcanvas menu
+.off-canvas-menu {
+	@include hamburger();
+	position: fixed;
+    left: 1.025rem;
+    top: 1.025rem;
+}
+
+#offCanvasMenu .menu > li {
+	display: block;
 }
 
 // Carousel styles
@@ -142,7 +173,7 @@ body, h2, ul, li {
 }
 
 .orbit-bullets button {
-	margin: 0.1em 0.5em 0.1em 0.5em;
+	margin: 0.1rem 0.5rem 0.1rem 0.5rem;
 }
 
 .orbit-bullets button.is-active, .orbit-bullets button:hover {
@@ -151,11 +182,26 @@ body, h2, ul, li {
 
 // Modal dialogs
 .full.reveal {
-	padding: 10em;
+	padding: 10rem;
 }
 
 .full .close-button {
-	font-size: 4em;
+	font-size: 4rem;
+}
+
+@include breakpoint(small down) {
+	.full .close-button {
+	    font-size: 2.5rem;
+	}
+
+	.full.reveal {
+		padding: 1rem;
+	}
+
+	#offCanvasMenu.full.reveal {
+		padding-top: 0.8rem;
+		padding: 10rem
+	}
 }
 
 // Gallery Card styles
@@ -208,15 +254,25 @@ body, h2, ul, li {
 // Break
 .break {
 	position: relative;
-	padding: 60px;
+	padding: 3.750rem;
 }
 
 .break .vertical-line {
-	height: 50px;
+	height: 3.125rem;
 	width: 1px;
 	background-color: transparent;
 	margin-left: 50%;
 	border-left: 1px solid #cccccc;
+}
+
+@include breakpoint(small down) {
+	.break {
+		padding: 1.750rem;
+	}
+
+	.break .vertical-line {
+		height: 2.125rem;
+	}
 }
 
 // Welcome Note

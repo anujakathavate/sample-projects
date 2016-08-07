@@ -1,11 +1,13 @@
 import React from "react";
 import Navigation from "./Navigation";
+import OffCanvasMenu from "./OffCanvasMenu";
 
 export default class Header extends React.Component {
-	// TODO: Revisit this do away with single DOM not separate for desktop and mobile.
+	// TODO: Revisit this to do away with single DOM not separate for desktop and mobile.
 	render() {
 		return (
 			<header className="header">
+				<OffCanvasMenu />
 				<div className="row hide-for-small-only">
 					<div className="medium-3 large-3 text-center columns brand-details mail">
 						sales@emergesoft.in
