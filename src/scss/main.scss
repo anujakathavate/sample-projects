@@ -35,7 +35,7 @@ body, h2, ul, li {
 	color: #444444;
 }
 
-@include breakpoint(medium down and lanscape) {
+@include breakpoint(medium down and landscape) {
 	.brand-name {
 		font-size: 4.250rem;
 	}
@@ -148,7 +148,7 @@ body, h2, ul, li {
 
 // Carousel styles
 .carousel {
-	height: 550px !important;
+	height: 28.375rem !important;
 }
 
 .carousel img {
@@ -156,16 +156,58 @@ body, h2, ul, li {
 }
 
 .carousel-message {
-	font-size: 70px;
-	color: #fff;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 1000px;
-	height: 200px;
-	margin-top: -100px;
-	margin-left: -500px;
-	text-align: center;
+	font-size: 4.375rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 62.500rem;
+    height: 12.500rem;
+    margin-top: -6.250rem;
+    margin-left: -31.250rem;
+    text-align: center;
+}
+
+@include breakpoint(medium down) {
+	// @include breakpoint(landscape) {
+	// 	.carousel {
+	// 		height: 28.475rem !important; // Overriding inline style.
+	// 	}
+	// }
+
+	// .carousel {
+	// 	height: 21.375rem !important; // Overriding inline style.
+	// }
+
+	.carousel {
+		height: 18.375rem !important; // Overriding inline style.
+	}
+
+	.carousel-message {
+		font-size: 2.375rem;
+	    width: 36.500rem;
+	    margin-top: -3.250rem;
+	    margin-left: -18.250rem;
+	}
+}
+
+@include breakpoint(small down) {
+	// @include breakpoint(landscape) {
+	// 	.carousel {
+	// 		height: 18.575rem !important; // Overriding inline style.
+	// 	}
+	// }
+
+	.carousel {
+	    height: 9.975rem !important; // Overriding inline style.
+	}
+
+	.carousel-message {
+		font-size: 1.375rem;
+	    width: 15.5rem;
+	    margin-top: -1.85rem;
+	    margin-left: -7.25rem;
+	}
 }
 
 .orbit-bullets {
