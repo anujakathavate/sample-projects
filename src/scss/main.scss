@@ -293,6 +293,26 @@ body, h2, ul, li {
     cursor: pointer;
 }
 
+@include breakpoint(medium down) {
+	.gallery-card {
+		height: 9.375rem;
+	}
+
+	.gallery-card img {
+		height: auto;
+	}
+
+	.gallery-label {
+		font-size: 1.250rem;
+	}
+}
+
+@include breakpoint(medium down) {
+	.gallery-label {
+		font-size: 0.938rem;
+	}
+}
+
 // Break
 .break {
 	position: relative;

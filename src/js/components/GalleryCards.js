@@ -16,13 +16,13 @@ var GalleryCard = ({label, imgSrc, modalId}) => {
 var GalleryCards = () => {
 	return (
 		<div className="row-fluid clear-fix">
-			<div className="small-4 columns no-padding">
+			<div className="small-12 medium-12 large-4 columns no-padding">
 				<GalleryCard label="Our Mission And Vision" imgSrc="mission-vision.jpg" modalId="mission"/>
 			</div>
-			<div className="small-4 columns no-padding">
+			<div className="small-12 medium-12 large-4 columns no-padding">
 				<GalleryCard label="Company Profile" imgSrc="company-profile.jpg" modalId="profile"/>
 			</div>
-			<div className="small-4 columns no-padding">
+			<div className="small-12 medium-12 large-4 columns no-padding">
 				<GalleryCard label="Services Overview" imgSrc="services-overview.jpeg" modalId="overview"/>
 			</div>
 
