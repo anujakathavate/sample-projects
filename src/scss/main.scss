@@ -242,7 +242,16 @@ body, h2, ul, li {
 
 	#offCanvasMenu.full.reveal {
 		padding-top: 0.8rem;
-		padding: 10rem
+		padding: 5rem 1rem;
+	}
+
+	#offCanvasMenu .menu > li {
+		background: #f7f7f7;
+		border-bottom: 1px solid #cccccc;
+	}
+
+	#offCanvasMenu .menu > li.active {
+	    background: #803737;
 	}
 }
 

@@ -5,7 +5,7 @@ var Footer = () => {
 	return (
 		<footer className="row-fluid">
             <Break/>
-			<div className="small-3 small-centered text-center">
+			<div className="small-12 medium-6 small-centered text-center">
                 Company © 2016 • Privacy Policy
 			</div>
 		</footer>
