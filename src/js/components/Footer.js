@@ -6,7 +6,7 @@ var Footer = () => {
 		<footer className="row-fluid">
             <Break/>
 			<div className="small-12 medium-6 small-centered text-center">
-                Company © 2016 • Privacy Policy
+                EmergeSoft © 2016 • Privacy Policy
 			</div>
 		</footer>
 	);

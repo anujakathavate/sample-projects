@@ -10,19 +10,19 @@ var ContactUs = () => {
 			</div>
             <div className="row contact-us">
                 <div className="small-12 medium-12 large-4 columns text-center">
-					sales@emergesoft.in
+					<a href="mailto:sales@emergesoft.in">sales@emergesoft.in</a>
 					<br/>
 					Bangalore
 					<br/>
                 </div>
                 <div className="small-12 medium-12 large-4 columns text-center">
-					+91 994 5333602 (NK)
+					+91 994 5333602
 					<br/>
-					+91 973 1100227 (SK)
+					+91 973 1100227
 					<br/>
                 </div>
                 <div className="small-12 medium-12 large-4 columns text-center">
-                    Email: sales@emergesoft.in
+                    Twitter: https://twitter.com/emergesoft
                     <br/>
                     Facebook: https://www.facebook.com/emergesoft
 					<br/>

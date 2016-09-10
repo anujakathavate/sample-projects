@@ -10,12 +10,13 @@ export default class Header extends React.Component {
 				<OffCanvasMenu />
 				<div className="row hide-for-small-only">
 					<div className="medium-3 large-3 text-center columns brand-details mail">
-						sales@emergesoft.in
+						<a href="mailto:sales@emergesoft.in">sales@emergesoft.in</a>
 						<br/>
 						Bangalore
 					</div>
 					<div className="medium-6 large-6 text-center columns brand">
 						<h1 className="brand-name">EmergeSoft</h1>
+						<div className="tag-line">We don’t just build websites, we build your business</div>
 					</div>
 					<div className="medium-3 large-3 text-center columns brand-details phone">
 						+91 994 5333602
@@ -26,9 +27,10 @@ export default class Header extends React.Component {
 				<div className="row show-for-small-only">
 					<div className="small-12 text-center columns brand">
 						<h1 className="brand-name">EmergeSoft</h1>
+						<div className="tag-line">We don’t just build websites, we build your business</div>
 					</div>
 					<div className="small-6 text-center columns brand-details mail">
-						sales@emergesoft.in
+						<a href="mailto:sales@emergesoft.in">sales@emergesoft.in</a>
 						<br/>
 						Bangalore
 					</div>

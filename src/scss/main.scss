@@ -21,18 +21,31 @@ body, h2, ul, li {
 
 // Header styles
 .header {
-	background-color: #FFFFFF;
+	background-color: #803737;
 }
 
-.brand-details {
-	color: #8a8a8a;
+.brand-details, .brand-details a {
+	color: #FFFFFF;
 	margin-top: 3rem; // TODO: Use vertical align or Foundation's classes if available
+}
+
+.tag-line {
+	color: #FFFFFF;
+	margin-top: -25px;
+	padding: 15px;
+	font-style: italic;
+}
+
+@include breakpoint(medium down) {
+	.tag-line {
+		font-size: 0.8rem;
+	}
 }
 
 .brand-name {
 	font-size: 6.250rem;
 	font-weight: 300;
-	color: #444444;
+	color: #FFFFFF;
 }
 
 @include breakpoint(medium down and landscape) {
@@ -157,15 +170,15 @@ body, h2, ul, li {
 
 .carousel-message {
 	font-size: 4.375rem;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 62.500rem;
-    height: 12.500rem;
-    margin-top: -6.250rem;
-    margin-left: -31.250rem;
-    text-align: center;
+	color: #ffffff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 62.500rem;
+	height: 12.500rem;
+	margin-top: -6.250rem;
+	margin-left: -31.250rem;
+	text-align: center;
 }
 
 @include breakpoint(medium down) {
@@ -279,6 +292,12 @@ body, h2, ul, li {
     -o-transition: background .52s ease-in;
     -webkit-transition: background .2s ease-in;
     transition: background .2s ease-in;
+}
+
+@include breakpoint(medium down) {
+	.gallery-card-overlay {
+		background: rgba(255, 255, 255, 0.3);
+	}
 }
 
 .gallery-card-overlay:hover, .gallery-label:hover ~ .gallery-card-overlay {
