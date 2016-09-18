@@ -1,0 +1,87 @@
+"use strict";
+
+// Storage classes
+// TODO: Convert to ES6
+var DataStore = {
+	getDataStore: function getDataStore(localStore) {
+		var localDataStorage = {
+			save: function save(model) {
+				console.log("Local Store.... SAVE");
+				localStorage.setItem("todoList", JSON.stringify(model));
+			},
+			fetch: function fetch() {
+				console.log("Local Store.... FETCH");
+				return { list: JSON.parse(localStorage.getItem("todoList")) };
+			}
+		};
+
+		var databaseStore = {
+			save: function save(model) {
+				var deferred = Q.defer();
+
+				console.log("Database Store.... SAVE, and ", model);
+				$.ajax({
+					url: "/todolist",
+					type: "POST",
+					data: JSON.stringify(model),
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: function success(data) {
+						//console.log(data);
+						deferred.resolve(data);
+					}
+				});
+
+				return deferred.promise;
+			},
+			fetch: function fetch() {
+				var deferred = Q.defer(),
+				    _this = this;
+
+				console.log("Database Store.... FETCH");
+				$.get("/todolist", function (data) {
+					if (!data.list) {
+						data = { list: [] };
+					}
+
+					_this.model = data.list;
+					deferred.resolve(data);
+				});
+
+				return deferred.promise;
+			}
+		};
+
+		return localStore ? localDataStorage : databaseStore;
+	}
+};
+
+// Store to manage todo list
+var Store = {
+	model: null,
+	init: function init(connection) {
+		var _this = this;
+
+		this.connection = connection;
+		this.store = DataStore.getDataStore;
+
+		// Register listeners
+		window.addEventListener("offline", function () {
+			_this.save();
+		});
+
+		window.addEventListener("online", function () {
+			_this.save();
+		});
+	},
+	save: function save(todoList) {
+		if (todoList) {
+			this.model = { list: todoList };
+		}
+
+		return this.store(!this.connection.isOnline()).save(this.model);
+	},
+	fetch: function fetch() {
+		return this.store(!this.connection.isOnline()).fetch();
+	}
+};
