@@ -3,7 +3,7 @@ import React from "react";
 export default class Modal extends React.Component {
     componentDidMount() {
         // TODO: This is a dirty hack since onclick on button is not firing for some reason. Revisit this code.
-        $('#' + this.props.id).find("button").on("click", () => {
+        $('#' + this.props.id).find("button.close-button").on("click", () => {
             $('#' + this.props.id).foundation('close');
         });
     }

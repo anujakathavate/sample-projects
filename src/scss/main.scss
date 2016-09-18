@@ -422,3 +422,20 @@ footer {
 	padding: 20px 20px 100px 20px;
 	font-size: 1.2rem;
 }
+
+// Error Messages
+.error-message {
+	display: none;
+}
+
+input.error {
+	border: 2px solid #cc0000;
+	margin-bottom: 0;
+}
+
+.error + .error-message {
+	display: block;
+	margin-bottom: 1rem;
+	color: #cc0000;
+	font-size: 0.875rem;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Break from "./Break";
+import Inquiry from "./Inquiry";
 
 var ContactUs = () => {
 	return (
@@ -10,10 +11,8 @@ var ContactUs = () => {
 			</div>
             <div className="row contact-us">
                 <div className="small-12 medium-12 large-4 columns text-center">
+					<Inquiry/>					
 					<a href="mailto:sales@emergesoft.in">sales@emergesoft.in</a>
-					<br/>
-					Bangalore
-					<br/>
                 </div>
                 <div className="small-12 medium-12 large-4 columns text-center">
 					+91 994 5333602

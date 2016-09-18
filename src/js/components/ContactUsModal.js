@@ -1,16 +1,15 @@
 import React from "react";
-import ContactUs from "./ContactUs";
 import Break from "./Break";
 import Modal from "./Modal";
+import Inquiry from "./Inquiry";
 
 var ContactUsModal = ({id}) => {
 	return (
         <Modal size="full" animIn="slide-in-right" animOut="slide-out-right" id={id}>
             <h3>CONTACT US</h3>
             <div className="text-center">
+				<Inquiry/>
 				<a href="mailto:sales@emergesoft.in">sales@emergesoft.in</a>
-				<br/>
-				Bangalore
             </div>
             <Break />
             <div className="text-center">
