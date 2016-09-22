@@ -37,6 +37,7 @@ export default class Inquiry extends React.Component {
         $("#message").on("change", (e) => {
             this.onChangeHandler(e);
         });
+
     }
 
     onChangeHandler(e) {
@@ -112,12 +113,31 @@ export default class Inquiry extends React.Component {
     }
 
     sendDetails() {
+
         if(!this.isFormValid()) {
             return;
         }
 
-        console.log("Values: ", this.state);
-    }
+        let nameValue = $("#name").val(),
+            emailValue = $("#email").val(),
+            phoneValue = $("#phone").val(),
+            descriptionValue = $("#message").val();
+
+        let messageObj = {
+            name: nameValue,
+            emailId: emailValue,
+            phoneNo: phoneValue,
+            description: descriptionValue
+        }
+
+        $.ajax({
+            method: "POST",
+            url: "/sendmail",
+            data:  messageObj 
+           }).done(function( msg ) {
+                console.log("Message successfully sent");
+        });
+   }
 
     render() {
         return (
